@@ -13,10 +13,6 @@
 - Linters
 - Webpack
 
-## Live Demo
-
-Visit TO Do list [Here](https://alanluqman.github.io/to-do-list/)
-
 ## Authors
 
 👤 **Alan Luqman**
