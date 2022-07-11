@@ -94,7 +94,8 @@ html {
   cursor: pointer;
 }
 
-.enterIcon:hover {
+.enterIcon,
+.edit:hover {
   color: black;
 }
 
@@ -110,10 +111,6 @@ html {
   cursor: pointer;
   align-self: flex-start;
   border-radius: 50%;
-}
-
-.edit:hover {
-  color: black;
 }
 
 .hide {
