@@ -94,11 +94,6 @@ html {
   cursor: pointer;
 }
 
-.enterIcon,
-.edit:hover {
-  color: black;
-}
-
 .visible {
   display: block;
 }
@@ -111,6 +106,11 @@ html {
   cursor: pointer;
   align-self: flex-start;
   border-radius: 50%;
+}
+
+.enterIcon,
+.edit:hover {
+  color: black;
 }
 
 .hide {
