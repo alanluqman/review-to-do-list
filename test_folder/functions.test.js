@@ -1,4 +1,6 @@
-import { addTask, removeTask, editDescription, status, clearAllCompleted } from '../__mock__/functions.js';
+import {
+  addTask, removeTask, editDescription, status, clearAllCompleted,
+} from '../__mock__/functions.js';
 
 describe('[] AddItem and RemoveItem from todo array', () => {
   test('# add one item', () => {
@@ -32,7 +34,7 @@ describe('[] AddItem and RemoveItem from todo array', () => {
 });
 
 describe('[] Test edit, status, clearAllCompleted', () => {
-    test('# Check if text is editable', () => {
+  test('# Check if text is editable', () => {
     const todo = [{
       description: 'test value 1',
       completed: false,
@@ -47,42 +49,42 @@ describe('[] Test edit, status, clearAllCompleted', () => {
       index: 2,
     }];
     editDescription(todo, 1, 'editedText');
-    expect(todo[1].description).toBe ('editedText');
-    });
+    expect(todo[1].description).toBe('editedText');
+  });
 
-    test('# Check the STATUS', () => {
-        const todo = [{
-        description: 'test value 1',
-        completed: false,
-        index: 0,
-        }, {
-        description: 'test value 2',
-        completed: false,
-        index: 1,
-        }, {
-        description: 'test value 3',
-        completed: false,
-        index: 2,
-        }];
-        status(todo, 1);
-        expect(todo[1].completed).toBeTruthy();
-    });
-
-    test('# Clear All Completed', () => {
-      const todo = [{
+  test('# Check the STATUS', () => {
+    const todo = [{
       description: 'test value 1',
-      completed: true,
+      completed: false,
       index: 0,
-      }, {
+    }, {
       description: 'test value 2',
       completed: true,
       index: 1,
-      }, {
+    }, {
       description: 'test value 3',
       completed: false,
       index: 2,
-      }];
-      clearAllCompleted(todo)
-      expect(todo).toHaveLength(1);
+    }];
+    status(todo, 1);
+    expect(todo[1].completed).toBe(false);
+  });
+
+  test('# Clear All Completed', () => {
+    const todo = [{
+      description: 'test value 1',
+      completed: true,
+      index: 0,
+    }, {
+      description: 'test value 2',
+      completed: true,
+      index: 1,
+    }, {
+      description: 'test value 3',
+      completed: false,
+      index: 2,
+    }];
+    clearAllCompleted(todo);
+    expect(todo).toHaveLength(1);
   });
 });
