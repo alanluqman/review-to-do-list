@@ -43,8 +43,9 @@ To Clone this repository on to your local PC
 3. Open [http://localhost:8080](http://localhost:8080) to view it in the browser.
 
 4. Install Jest for Testing.
-  i. Add jest to package.json test script.
-  ii. Run npm jest to test.
+  i.  Add jest to package.json script test section;
+      "test": "jest --coverage".
+  ii. Run npm test.
 
 ## Authors
 
