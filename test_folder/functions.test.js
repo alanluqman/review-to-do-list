@@ -1,4 +1,4 @@
-import { addTask, removeTask } from '../__mock__/functions.js';
+import { addTask, removeTask, editDescription } from '../__mock__/functions.js';
 
 describe('AddItem and RemoveItem from todo array', () => {
   test('# add one item', () => {
@@ -28,5 +28,23 @@ describe('AddItem and RemoveItem from todo array', () => {
     }];
     removeTask(todo, 0);
     expect(todo).toHaveLength(2);
+  });
+
+  test('# Check if text is editable', () => {
+    const todo = [{
+      description: 'test value 1',
+      completed: false,
+      index: 0,
+    }, {
+      description: 'test value 2',
+      completed: false,
+      index: 1,
+    }, {
+      description: 'test value 3',
+      completed: false,
+      index: 2,
+    }];
+    editDescription(todo, 1, 'editedText');
+    expect(todo[1].description).toBe ('editedText');
   });
 });
