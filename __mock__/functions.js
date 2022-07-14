@@ -5,9 +5,22 @@ export const removeTask = (todo, index) => {
 };
 
 export const editDescription = (todo, index, text) =>  todo[index].description = text;
-   
+
 export const status = (todo, index) => {
     const sts = todo[index].completed;
     if (sts) todo[index].completed= false;
-    if (!sts) todo[index].completed= true;   
+    if (!sts) todo[index].completed= true;
+};
+
+export const clearAllCompleted = (todo) => {
+  if (todo !== '') {
+    for (let i = 0; i < todo.length; i += 1) {
+      if (todo[i].completed === true) {
+        return todo[i];
+      }
+      else {
+        return todo;
+      }
+    }
+  };
 };
