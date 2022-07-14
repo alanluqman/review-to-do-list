@@ -8,19 +8,17 @@ export const editDescription = (todo, index, text) =>  todo[index].description =
 
 export const status = (todo, index) => {
     const sts = todo[index].completed;
-    if (sts) todo[index].completed= false;
-    if (!sts) todo[index].completed= true;
+    if (sts) todo[index].completed = false;
+    if (!sts) todo[index].completed = true;
 };
 
 export const clearAllCompleted = (todo) => {
   if (todo !== '') {
     for (let i = 0; i < todo.length; i += 1) {
       if (todo[i].completed === true) {
-        return todo[i];
+        todo.splice(i, 1);
+        i -= 1;
       }
-      else {
-        return todo;
-      }
-    }
+     }
   };
 };

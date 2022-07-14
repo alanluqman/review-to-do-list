@@ -1,4 +1,4 @@
-import { addTask, removeTask, editDescription, status } from '../__mock__/functions.js';
+import { addTask, removeTask, editDescription, status, clearAllCompleted } from '../__mock__/functions.js';
 
 describe('[] AddItem and RemoveItem from todo array', () => {
   test('# add one item', () => {
@@ -65,7 +65,24 @@ describe('[] Test edit, status, clearAllCompleted', () => {
         index: 2,
         }];
         status(todo, 1);
-        expect(todo[1].completed).toBe (true);
+        expect(todo[1].completed).toBeTruthy();
     });
 
+    test('# Clear All Completed', () => {
+      const todo = [{
+      description: 'test value 1',
+      completed: true,
+      index: 0,
+      }, {
+      description: 'test value 2',
+      completed: true,
+      index: 1,
+      }, {
+      description: 'test value 3',
+      completed: false,
+      index: 2,
+      }];
+      clearAllCompleted(todo)
+      expect(todo).toHaveLength(1);
+  });
 });
