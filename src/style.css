@@ -23,7 +23,7 @@ html {
 }
 
 .header-holder {
-  background-image: url(./sky.webp);
+  background-image: linear-gradient(rgb(110, 144, 255), rgb(0, 48, 206));
   background-repeat: no-repeat;
   background-size: cover;
   padding: 1.5rem;
@@ -193,7 +193,7 @@ html {
 
 .footer {
   /* background-image: linear-gradient(0deg, orange, 10%, rgb(146, 206, 255)); */
-  background-image: url(./sky.webp);
+  background-image: linear-gradient(blue, rgb(133, 133, 255));
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
